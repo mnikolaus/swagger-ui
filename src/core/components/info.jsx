@@ -101,20 +101,8 @@ export default class Info extends React.Component {
         </hgroup>
 
         <div className="description">
-          <Markdown source={ description } />
+          { description }
         </div>
-
-        {
-          termsOfService && <div>
-            <a target="_blank" href={ termsOfService }>Terms of service</a>
-          </div>
-        }
-
-        { contact && contact.size ? <Contact data={ contact } /> : null }
-        { license && license.size ? <License license={ license } /> : null }
-        { externalDocsUrl ?
-            <a target="_blank" href={externalDocsUrl}>{externalDocsDescription || externalDocsUrl}</a>
-        : null }
 
       </div>
     )
